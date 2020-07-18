@@ -60,7 +60,7 @@ mosquitto_pub -h localhost -p 8883 -u "underground" -P "underground" -t test -m 
 
 ## Test Mosquitto mqtt over websockets SSL port: 9002
 ```shell
-pip install paho-mqtt
+pip3 install paho-mqtt
 
 python3 paho-client.py
 ```
