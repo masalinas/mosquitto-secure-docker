@@ -31,7 +31,7 @@ mosquitto_passwd -c passwordfile underground
 ## Docker Mosquitto container
 Create eclipse-mosquitto docker container with SSL, persistence and authentication password from previous data created
 ```shell
-docker run --name mosquitto -it -p 8883:8883 -v $PWD/mosquitto.conf:/mosquitto/config/mosquitto.conf -v $PWD/certs/ca.crt:/mosquitto/certs/ca.crt -v $PWD/certs/localhost.crt:/mosquitto/certs/localhost.crt -v $PWD/certs/localhost.key:/mosquitto/certs/localhost.key -v $PWD/password_file:/mosquitto/config/password_file eclipse-mosquitto
+docker run --name mosquitto -it -p 8883:8883 -p 9002:9002 -v $PWD/mosquitto.conf:/mosquitto/config/mosquitto.conf -v $PWD/certs/ca.crt:/mosquitto/certs/ca.crt -v $PWD/certs/localhost.crt:/mosquitto/certs/localhost.crt -v $PWD/certs/localhost.key:/mosquitto/certs/localhost.key -v $PWD/password_file:/mosquitto/config/password_file eclipse-mosquitto
 ```
 
 ## Mosquitto debug
