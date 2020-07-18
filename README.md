@@ -49,7 +49,7 @@ Login inside mosquitto container
 docker exec -u root -ti mosquitto /bin/ash
 ```
 
-## Test Mosquitto mqtt SSL 8883 port
+## Test Mosquitto mqtt SSL port: 8883
 Just a little test using mosquitto tools
 
 ```shell
@@ -58,7 +58,7 @@ mosquitto_sub -h localhost -p 8883 -u "underground" -P "underground" -t test -d 
 mosquitto_pub -h localhost -p 8883 -u "underground" -P "underground" -t test -m 'Hello SSL Mosquitto' -d --cafile certs/ca.crt --insecure
 ```
 
-## Test Mosquitto mqtt over websockets  mqtt SSL 9002 port
+## Test Mosquitto mqtt over websockets SSL port: 9002
 ```shell
 pip install paho-mqtt
 
