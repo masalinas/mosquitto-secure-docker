@@ -1,13 +1,14 @@
 # Description
 Mosquitto Secure Docker Docker Deployment Deployment Steps
 
-## Mosquitto certificates
+## Mosquitto certificates from shell script
 Generate mosquitto certificates ca.crt, localhost.crt and localhost.key for localhost server from shell script
 
 ```sh
 generate-CA.sh localhost
 ```
 
+## Mosquitto certificates manually
 Generate certificates manually from openssl tool
 - 1 - Create a CA key pair:
 ```sh
