@@ -13,13 +13,13 @@ Generate certificates manually from openssl tool
 ```sh
 openssl genrsa -des3 -out ca.key 2048
 ```
-genrsa: generate a RSA private key
+	genrsa: generate a RSA private key
 
-des3: Using DES3 cipher for the key generation
+	des3: Using DES3 cipher for the key generation
 
-out: specifies the output file name (.key)
+	out: specifies the output file name (.key)
 
-2048: number of bits for the private key
+	2048: number of bits for the private key
 
 - 2 - Create CA certificate and sign it with the private key from step 1:
 ```sh
