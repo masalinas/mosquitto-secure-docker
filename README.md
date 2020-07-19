@@ -9,26 +9,26 @@ generate-CA.sh localhost
 ```
 
 Generate certificates manually from openssl tool
-- 1. Create a CA key pair:
+- 1 - Create a CA key pair:
 ```shell
 openssl genrsa -des3 -out ca.key 2048
 ```
-- 2. Create CA certificate and sign it with the private key from step 1:
+- 2 - Create CA certificate and sign it with the private key from step 1:
 ```shell
 openssl req -new -x509 -days 3650 -key ca.key -out ca.crt
 ```
 
-- 3. Create the broker key pair:
+- 3 - Create the broker key pair:
 ```shell
 openssl genrsa -out localhost.key 2048
 ```
 
-- 4. Create a CA certificate sign request using the key from step 3:
+- 4 - Create a CA certificate sign request using the key from step 3:
 ```shell
 openssl req -new -out localhost.csr -key localhost.key
 ```
 
-- 5. Use the CA certificate from step 2 to sign the request from step 4:
+- 5 - Use the CA certificate from step 2 to sign the request from step 4:
 ```shell
 openssl x509 -req -in localhost.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out localhost.crt -days 3650
 ```
