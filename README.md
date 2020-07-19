@@ -139,4 +139,7 @@ mosquitto_pub -h localhost -p 8883 -u "underground" -P "underground" -t test -m 
 pip3 install paho-mqtt
 
 python3 paho-client.py
+
 ```
+
+To check javascript we could use the  [paho online client](https://www.eclipse.org/paho/clients/js/utility/)
